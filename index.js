@@ -25,7 +25,7 @@ if (definedName2 == ''){
 }
 else (console.log("Welcome to the game " + definedName2))
 //asks players to set a certain number of rounds they want to play for
-let rounds = prompt("How many rounds would you like to have to guess?")
+let rounds = prompt("How many chances would you like to have to guess?")
 
 //setting players names based on whether they gave one or it's a random one
 let name1 = (definedName1 || pickedrandomname)
@@ -61,16 +61,14 @@ function play() {
 			console.log('You got it correct');
       //adds 1 to point1
 		  point1++
-		  console.log('Player 1 has ' + point1 + ' points');
+		  console.log(name1 + ' has ' + point1 + ' points');
       //breaks loop
       break;
 		}
     //adds one to round1
     round1++
     
-    if (round1 > rounds){
-      console.log('Player 1 loses. Player 2 your turn. ')
-    }
+    
     
     }//loop happens while round1 is less than round
     while (round1 < rounds)
@@ -88,6 +86,7 @@ do{
     else if (guess2 < random) {
 			console.log('Your number is too low');
 		} 
+
     else {
 			console.log('You got it correct');
 		  point2++
@@ -96,9 +95,7 @@ do{
 		} round2++}   
     while (round2 < rounds)
     
-    if (round2>rounds){
-      console.log('You both lost')
-    }
+    
 
 	
 	
