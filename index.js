@@ -73,17 +73,17 @@ function play() {
     }//loop happens while round1 is less than round
     while (round1 < rounds)
     
-   
+   random1 = Math.floor(Math.random() * 20 + 1);
 //starts loop for player 2 to play the game
 do{
   
     guess2 = prompt(name2 + ' enter a number from 1-20:');
-		if (guess2 > random) {
+		if (guess2 > random1) {
 			console.log('Your number is too high')
 		} 
     
     
-    else if (guess2 < random) {
+    else if (guess2 < random1) {
 			console.log('Your number is too low');
 		} 
 
